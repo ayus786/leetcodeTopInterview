@@ -24,6 +24,10 @@ public:
     }
 };
 
+// *node=*node->next just copies all data, same as 
+// node->val = node->next->val;
+// node->next = node->next->next;
+
 // you can think about doing *node = *node->next it will run the testcase but it will cause memory leak
 // because lets say you have 1->2->3->4 and your target node is 3 then according to this solution our output will be correct as 1->2->4 but
 // there's the original node with value 4 being all alone now. It is lost and its memory is only freed by the operating system when the program exits 
